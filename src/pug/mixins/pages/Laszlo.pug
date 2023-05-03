@@ -1,0 +1,45 @@
+mixin Profile
+  +Section('container-fluid').py-0#page-profile
+    .row
+      .col-xl-7.px-0
+        .sticky-top.overflow-hidden.min-vh-50.min-vh-xl-100
+          +Background({
+            image: `${CWD}assets/img/oppkey/laszlo.png`,
+            attrs: {'data-zanim-trigger': 'scroll', 'data-zanim-lg': {animation: 'zoom-out-slide-right', delay: 0.4}}
+          })
+
+      .col-xl-5.bg-white.py-6
+        .row.h-100.flex-center
+          .col-lg-8
+            +ProfileContent
+
+mixin ProfileContent
+  .row.justify-content-center(data-zanim-timeline!={} data-zanim-trigger='scroll')
+    .col-md-10.col-lg-12
+      .overflow-hidden
+        h4(data-zanim-xs!={delay: 0.1}) Laszlo B. Varga
+      .overflow-hidden
+        a(href='https://community.theta360.guide/u/biviel/summary') 
+          h6.text-700.fw-normal.text-uppercase.ls.mb-4(data-zanim-xs!={delay: 0.2}) @biviel
+    .col-md-7.col-lg-12
+      .overflow-hidden
+        p.mb-0.pe-sm-5.pe-lg-0(data-zanim-xs!={delay: 0.3}) Laszlo is developing a mobile wireless streaming application for RICOH THETA that will allow people to better view museums and public spaces. His THETA plug-in is available on the RICOH THETA Plug-in Store. He has significantly improved the speed of the wireless mobile plug-in, which can stream live 360 video to an RTMP server like YouTube directly from THETA Z1. Setup is done through his flow.tours site. He is currently improving his plug-in and has added the ability to access log output, which is turned off in plug-in development by default. He has also shown how to set permissions for THETA X plug-in development. X is different from Z1 and V because you can’t use Vysor to set permissions.
+
+    .col-md-3.col-lg-12.mt-6.mt-md-0.mt-lg-6
+        a(href='https://pluginstore.theta360.com/plugins/tours.flow.hdrstreaming/')
+          h6.text-700.text-uppercase.fw-large.ls.mb-4(data-zanim-xs!={delay: 0.2}) Plugin in Store
+
+        a(href='https://www.flow.tours/en')
+          h6.text-700.text-uppercase.fw-large.ls.mb-4(data-zanim-xs!={delay: 0.2}) Flow Tours Website
+
+    //-   .overflow-hidden
+    //-     div(data-zanim-xs!={delay: 0.6})
+    //-       h6.text-uppercase.ls.mt-4 Follow Me
+
+    //-       .mt-3.fs--1
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-twitter.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-google-plus-g.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300
+    //-           span.fab.fa-linkedin-in.text-600

@@ -1,0 +1,46 @@
+mixin Profile
+  +Section('container-fluid').py-0#page-profile
+    .row
+      .col-xl-7.px-0
+        .sticky-top.overflow-hidden.min-vh-50.min-vh-xl-100
+          +Background({
+            image: `${CWD}assets/img/oppkey/dahlo.jpg`,
+            attrs: {'data-zanim-trigger': 'scroll', 'data-zanim-lg': {animation: 'zoom-out-slide-right', delay: 0.4}}
+          })
+
+      .col-xl-5.bg-white.py-6
+        .row.h-100.flex-center
+          .col-lg-8
+            +ProfileContent
+
+mixin ProfileContent
+  .row.justify-content-center(data-zanim-timeline!={} data-zanim-trigger='scroll')
+    .col-md-10.col-lg-12
+      .overflow-hidden
+        h4(data-zanim-xs!={delay: 0.1}) DalHo Park
+      .overflow-hidden
+        a(href='https://community.theta360.guide/u/dhp/summary') 
+          h6.text-700.fw-normal.text-uppercase.ls.mb-4(data-zanim-xs!={delay: 0.2}) @dhp
+    .col-md-7.col-lg-12
+      .overflow-hidden
+        p.mb-20.pe-sm-5.pe-lg-0(data-zanim-xs!={delay: 0.3}) DalHo and his team at TeeVR is building a handheld indoor scanner using THETA Z1. They are using the USB API to live stream. In testing the API, they discovered that an Image Stitching API command can be set to no-stitching (dual-fisheye). The feature was added in the latest Z1 firmware update (ver 2.10.3 – released 2022-05-31) but the RICOH documentation about this feature was not updated (0xD834 Image Stitching 3).
+        img(src=`${CWD}assets/img/oppkey/D1.png` alt="" data-zanim-xs!={
+                animation: "zoom-in",
+                delay: 0.2,
+              } data-zanim-trigger="scroll").rounded.img-fluid
+        img(src=`${CWD}assets/img/oppkey/D2.png` alt="" data-zanim-xs!={
+                animation: "zoom-in",
+                delay: 0.2,
+              } data-zanim-trigger="scroll").rounded.img-fluid
+
+    //-   .overflow-hidden
+    //-     div(data-zanim-xs!={delay: 0.6})
+    //-       h6.text-uppercase.ls.mt-4 Follow Me
+
+    //-       .mt-3.fs--1
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-twitter.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-google-plus-g.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300
+    //-           span.fab.fa-linkedin-in.text-600

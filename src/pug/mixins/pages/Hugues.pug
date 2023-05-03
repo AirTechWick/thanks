@@ -1,0 +1,49 @@
+mixin Profile
+  +Section('container-fluid').py-0#page-profile
+    .row
+      .col-xl-7.px-0
+        .sticky-top.overflow-hidden.min-vh-50.min-vh-xl-100
+          +Background({
+            image: `${CWD}assets/img/oppkey/hugues.jpg`,
+            attrs: {'data-zanim-trigger': 'scroll', 'data-zanim-lg': {animation: 'zoom-out-slide-right', delay: 0.4}}
+          })
+
+      .col-xl-5.bg-white.py-6
+        .row.h-100.flex-center
+          .col-lg-8
+            +ProfileContent
+
+mixin ProfileContent
+  .row.justify-content-center(data-zanim-timeline!={} data-zanim-trigger='scroll')
+    .col-md-10.col-lg-12
+      .overflow-hidden
+        h4(data-zanim-xs!={delay: 0.1}) Hugues Perret
+      .overflow-hidden
+        a(href='https://community.theta360.guide/u/hugues/summary') 
+          h6.text-700.fw-normal.text-uppercase.ls.mb-4(data-zanim-xs!={delay: 0.2}) @Hugues
+    .col-md-7.col-lg-12
+      .overflow-hidden
+        p.mb-20.pe-sm-5.pe-lg-0(data-zanim-xs!={delay: 0.3}) Hugues has developed a commercial sewer robot that using live streaming and recorded 360 video from a robot that traverses sewer pipes to do inspections. He’s contributed multiple solutions in the theta360.guide forums. After extensive testing, he made fixed gphoto2 to be able to change the shutter speed on the Theta V. Hugues also contributed his technique of getting the RTSP stream from THETA and send it in rtp to Janus Gateway. Janus Gateway, running on a Raspberry Pi, transforms the RTP stream and distributes it to HTML5 clients (tested on both FireFox and Chrome) with webRTC. Thank you, Hugues!
+        img(src=`${CWD}assets/img/oppkey/robot.png` alt="" data-zanim-xs!={
+                animation: "zoom-in",
+                delay: 0.2,
+              } data-zanim-trigger="scroll").rounded.img-fluid
+
+    .col-md-3.col-lg-12.mt-6.mt-md-0.mt-lg-6
+        a(href=`https://www.youtube.com/watch?v=cFh2awHrH20`)
+          h6.text-700.text-uppercase.fw-large.ls.mb-4(data-zanim-xs!={delay: 0.2}) Video of Robot
+        a(href=`https://community.theta360.guide/t/using-usb-api-mtp-with-libghoto2-and-python-bindings-on-macos-raspberry-pi-linux-ros/4521/11`)
+          h6.text-700.text-uppercase.fw-large.ls.mb-4(data-zanim-xs!={delay: 0.2}) Vendor-ID Fix
+        a(href=`https://community.theta360.guide/t/low-latency-0-4s-h-264-livestreaming-from-theta-v-wifi-to-html5-clients-with-rtsp-plug-in-ffmpeg-and-janus-gateway-on-raspberry-pi/4887`)
+          h6.text-700.text-uppercase.fw-large.ls.mb-4(data-zanim-xs!={delay: 0.2}) Janus Gateway Implementation
+    //-   .overflow-hidden
+    //-     div(data-zanim-xs!={delay: 0.6})
+    //-       h6.text-uppercase.ls.mt-4 Follow Me
+
+    //-       .mt-3.fs--1
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-twitter.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+    //-           span.fab.fa-google-plus-g.text-600
+    //-         a(href='#!').btn.btn-outline-light.btn-xs.border-300
+    //-           span.fab.fa-linkedin-in.text-600
