@@ -1,4 +1,12 @@
 build
+public/components
+public/documentation
+public/homes
+public/pages
+public/vendors
+public/index.html
+public/assets/css/*.map
+public/assets/js/*.map
 
 # Compiled source #
 ###################
