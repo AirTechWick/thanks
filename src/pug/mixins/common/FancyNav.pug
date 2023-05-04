@@ -118,22 +118,36 @@ mixin FancyNav(params={})
           //- ****** RICOH Official ************** 
           li.fancynav-item.fancy-dropdown
             a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
-              span.fancynav-link-content RICOH Official
+              span.fancynav-link-content ricoh official
             .fancy-dropdown-menu
               .row.pb-4.pt-3
-                .col-auto
+                .col-sm-auto.pe-4
                   .row-auto
                     a(href='https://github.com/ricohapi/awesome-theta')
                       span.fancynav-link-content Awesome THETA docs
                   .row-auto
-                    a(href='https://theta360.com/en/')
-                      span.fancynav-link-content Product Info
+                    a(href='https://github.com/ricohapi/theta-api-specs/blob/main/theta-web-api-v2.1/README.md')
+                      span.fancynav-link-content Web API v2.1
+                  .row-auto
+                    a(href='https://github.com/ricohapi/theta-api-specs/blob/main/theta-usb-api/README.md')
+                      span.fancynav-link-content USB API v2
+                  .row-auto
+                    a(href='https://github.com/ricohapi/theta-api-specs/blob/main/theta-bluetooth-api/README.md')
+                      span.fancynav-link-content Bluetooth API v2
+                  .row-auto
+                    a(href='https://github.com/ricohapi/theta-api-specs/blob/main/theta-bluetooth-api/README.md')
+                      span.fancynav-link-content Plug-in APIs
+                .col-sm-auto.pe-4  
                   .row-auto
                     a(href='https://support.theta360.com/en/')
                       span.fancynav-link-content Support
                   .row-auto
+                    a(href='https://theta360.com/en/')
+                      span.fancynav-link-content Product Info
+                  .row-auto
                     a(href='https://us.ricoh-imaging.com/shop/#section-theta')
-                      span.fancynav-link-content Buy THETA (US)                                                              
+                      span.fancynav-link-content Buy Now! (US)  
+                                                          
           //- li.fancynav-item.fancy-dropdown
           //-   a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
           //-     span.fancynav-link-content services
@@ -160,26 +174,25 @@ mixin FancyNav(params={})
 
           //- li.fancynav-item.fancy-dropdown
           //-   a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
-          //-     span.fancynav-link-content components
+          //-     span.fancynav-link-content ricoh official - REDO
           //-   .fancy-dropdown-menu
           //-     .row.pb-2.pt-3
           //-       - var dividerComponents = sitemap.components.sparrow.length + 1;
           //-       .col-sm-auto.mb-3
           //-         .row
           //-           .col-sm-auto.pe-4
-          //-             a(href='JavaScript:void(0)').fancy-dropdown-title.fw-black.ls.fs--1.mb-1 Sparrow
-          //-             each item, index in sitemap.components.sparrow
-          //-               if index < (dividerComponents / 2) - 1
-          //-                 +NavLink(item,'components/sparrow/')
-          //-           .col-sm-auto.pe-4
+          //-             a(href='JavaScript:void(0)').fancy-dropdown-title.fw-black.ls.fs--1.mb-1 THETA APIs
+          //-           a(href='https://github.com/ricohapi/theta-api-specs/blob/main/theta-web-api-v2.1/README.md')
+          //-             span.fancynav-link-content THETA Web API v2.1
+          //-         .col-sm-auto.pe-4
           //-             each item, index in sitemap.components.sparrow
           //-               if index >= (dividerComponents / 2) - 1
           //-                 +NavLink(item, 'components/sparrow/')
           //-       .col-sm-auto.pe-3.mb-3
           //-         a(href='JavaScript:void(0)').fancy-dropdown-title.fw-black.ls.fs--1.mb-1 Bootstrap
-          //-         each item, index in sitemap.components.bootstrap
-          //-           +NavLink(item, 'components/bootstrap/')
-
+          //-          a(href='https://us.ricoh-imaging.com/shop/#section-theta')
+          //-             span.fancynav-link-content Get Developer Discount Code                                                              
+  
           //- li.fancynav-item.fancy-dropdown
           //-   a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
           //-     span.fancynav-link-content documentation
