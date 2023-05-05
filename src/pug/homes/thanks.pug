@@ -1,5 +1,5 @@
 extends ../layouts/LayoutTheme
-include ../mixins/homes/Oppkey
+include ../mixins/homes/Thanks
 
 append variables
   - var attrsHtml = Object.assign({ lang: `${ dir === 'rtl' ? 'ar' : 'en-US'}`, dir: dir || 'ltr', class: 'has-sidemenu has-sidemenu-left' });
@@ -14,11 +14,6 @@ block beforeMainContent
   +FancyNav({navClass: 'fancynavbar-left'})(data-onscroll-fade-in = 'true')
 
 append mainContent 
-  +CafeHeader
-  +CafeAbout
-  //- +CafeMenu1
+  +Header
+  +Award
   
-  //- +CafeBanner
-  //- +CafeMenu2
-  //- +CafeBigImage
-  //- +CafeContact
