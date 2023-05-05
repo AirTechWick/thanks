@@ -1,0 +1,8 @@
+extends ../layouts/DiscountLayout
+include ../mixins/pages/Discount.pug
+
+append variables
+  - var bg = 'discount';
+
+block splitRightContent 
+  +Discount

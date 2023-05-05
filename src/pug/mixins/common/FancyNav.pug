@@ -64,10 +64,14 @@ mixin FancyNav(params={})
         duration: 0.8,
         delay: 0.4
       } data-zanim-trigger='scroll')
-        a(href='#!').fancynavbar-addon-item
+        a(href='https://twitter.com/theta360dev').fancynavbar-addon-item
           span.fab.fa-twitter
-        a(href='#languageModal', data-bs-toggle='modal').fancynavbar-addon-item
-          span.font-sans-serif.ls.fw-black.fs--1.d-block EN
+        a(href='https://www.youtube.com/@THETA360Developers').fancynavbar-addon-item
+          span.fab.fa-youtube
+        a(href='https://community.theta360.guide').fancynavbar-addon-item
+          span.fas.fa-comments                    
+        //- a(href='#languageModal', data-bs-toggle='modal').fancynavbar-addon-item
+        //-   span.font-sans-serif.ls.fw-black.fs--1.d-block EN
         if item
           a(href=item[2] class=item[0]).fancynavbar-addon-item
             span(class=item[1])
@@ -115,6 +119,9 @@ mixin FancyNav(params={})
                   .row-auto
                     a(href='https://theta360.guide/special/sc2/')
                       span.fancynav-link-content SC2 Developers 
+                  .row-auto
+                    a(href=`${CWD}pages/discount.html`)
+                      span.fancynav-link-content Camera Discount                      
           //- ****** RICOH Official ************** 
           li.fancynav-item.fancy-dropdown
             a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
@@ -144,9 +151,9 @@ mixin FancyNav(params={})
                   .row-auto
                     a(href='https://theta360.com/en/')
                       span.fancynav-link-content Product Info
-                  .row-auto
-                    a(href='https://us.ricoh-imaging.com/shop/#section-theta')
-                      span.fancynav-link-content Buy Now! (US)  
+
+                    //- a(href='https://us.ricoh-imaging.com/shop/#section-theta')
+                    //-   span.fancynav-link-content Buy Now! (US)  
                                                           
           //- li.fancynav-item.fancy-dropdown
           //-   a(href='JavaScript:void(0)').fancynav-link.fancy-dropdown-toggle
