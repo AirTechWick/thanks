@@ -1,0 +1,34 @@
+mixin Award
+  +Section(false, "container").text-center.pb-0#award
+    mixin AwardCard(img, name, title, link)
+      .hoverbox
+        img(src=`${CWD}assets/img/award/${img}.png` alt='' data-zanim-xs!={
+          animation: "zoom-in",
+          delay: 0.1
+        }).rounded.img-fluid
+      .overflow-hidden
+        a(href=`${link}`)
+          h5.fs-0.fw-bold.mt-3.mb-1(data-zanim-xs!={from: {y: 45}, delay: 0.2})!=name
+      .overflow-hidden
+        h6.text-700.fw-normal.text-uppercase.ls(data-zanim-xs!={from: {y: 22}, delay: 0.3})=title  
+    .row.justify-content-center
+      .col-lg-9.overflow-hidden
+        p.fs-2.font-sans-serif.fw-normal.text-dark 
+          | The theta360.guide community is 
+          | fueled by great technical contributions from individual members. 
+          span.text-decoration-underline.fw-bolder.ms-1 Learn more and meet others! 
+          |  THETA technology experts regularly review submissions and assign 
+          | Community Thanks Award badges to the best projects!
+    .row.flex-center
+      .w-100
+      .col-sm-6.col-lg-3.pt-5.pt-xl-7(data-zanim-timeline!={delay: 0.0} data-zanim-trigger='scroll')
+        +AwardCard("varga", "HDR Wireless Live Streaming", "Java, Plugin", `${CWD}pages/laszlo.html`)    
+      .col-sm-6.col-lg-3.pt-5.pt-xl-7(data-zanim-timeline!={delay: 0.0} data-zanim-trigger='scroll')
+        +AwardCard("park", "Photogrammetry", "Python, USB API", `${CWD}pages/dalho.html`)  
+      .col-sm-6.col-lg-3.pt-5.pt-xl-7(data-zanim-timeline!={delay: 0.0} data-zanim-trigger='scroll')
+        +AwardCard("katter", "Live Streaming", "Python, OpenCV", `${CWD}pages/robert.html`)  
+      .col-sm-6.col-lg-3.pt-5.pt-xl-7(data-zanim-timeline!={delay: 0.0} data-zanim-trigger='scroll')
+        +AwardCard("perret", "Inspection Robot", "Python, USB API", `${CWD}pages/hugues.html`) 
+
+    .row.justify-content-center.mt-6
+      .col-lg-9.overflow-hidden

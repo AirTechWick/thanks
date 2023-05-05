@@ -1,5 +1,5 @@
-extends layouts/LayoutTheme
-include mixins/homes/Thanks
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Thanks
 
 append variables
   - var attrsHtml = Object.assign({ lang: `${ dir === 'rtl' ? 'ar' : 'en-US'}`, dir: dir || 'ltr', class: 'has-sidemenu has-sidemenu-left' });
@@ -16,3 +16,4 @@ block beforeMainContent
 append mainContent 
   +Header
   +Award
+  
