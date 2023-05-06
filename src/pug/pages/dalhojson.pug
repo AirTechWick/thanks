@@ -1,0 +1,18 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/AwardDetailJson.pug
+
+append mainContent
+  - 
+    const data = {
+      "project": "USB API for Photogrammetry", 
+      "author": "DalHo Park",
+      "details": "DalHo and his team at TeeVR is building a handheld indoor scanner using \
+      THETA Z1. They are using the USB API to live stream. In testing the API, \
+      they discovered that an Image Stitching API command can be set to \
+      no-stitching (dual-fisheye). The feature was added in the latest Z1 \
+      firmware update (ver 2.10.3 – released 2022-05-31) but the RICOH \
+      documentation about this feature was not updated (0xD834 Image Stitching 3).",
+      "referenceLink": "https://community.theta360.guide/t/a-patch-for-getting-right-human-readable-white-balance-label/8245?u=craig",
+      "image": "detail-placeholder-2.jpg"
+    }
+  +AwardDetailJson(data)

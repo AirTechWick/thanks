@@ -1,0 +1,17 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/AwardDetailJson.pug
+
+
+
+append mainContent
+  -
+    const data = {
+      "project": "Live Preview Over Ethernet",
+      "author": "Robert Katter",
+      "details":   "Preview MJPEG Stream on a Ricoh Theta X with Python and OpenCV. \
+      Robert made a live MJPEG preview running over a USB-C ethernet adapter to the \
+      Ricoh Theta X.",
+      "referenceLink": "https://community.theta360.guide/t/preview-mjpeg-stream-on-a-ricoh-theta-x-with-python-and-opencv/8919",
+      "image": "detail-sample.jpg"
+    }
+  +AwardDetailJson(data)
