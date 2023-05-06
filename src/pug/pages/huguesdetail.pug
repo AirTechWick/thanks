@@ -1,0 +1,19 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/AwardDetail.pug
+
+append mainContent  
+  +AwardDetail(
+    "Python and libgphoto2 Modication for Robot", 
+    "Hugues Perret",
+    "Hugues has developed a commercial sewer robot that using live streaming \
+    and recorded 360 video from a robot that traverses sewer pipes to do \
+    inspections. He’s contributed multiple solutions in the theta360.guide \
+    forums. After extensive testing, he made fixed gphoto2 to be able to \
+    change the shutter speed on the Theta V. Hugues also contributed his \
+    technique of getting the RTSP stream from THETA and send it in rtp to \
+    Janus Gateway. Janus Gateway, running on a Raspberry Pi, transforms the \
+    RTP stream and distributes it to HTML5 clients (tested on both FireFox and \
+    Chrome) with webRTC. Thank you, Hugues!",
+    "https://community.theta360.guide/t/using-usb-api-mtp-with-libghoto2-and-python-bindings-on-macos-raspberry-pi-linux-ros/4521/11?u=craig",
+    "detail-placeholder-3.jpg"
+  )
