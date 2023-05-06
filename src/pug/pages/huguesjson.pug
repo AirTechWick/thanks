@@ -1,6 +1,9 @@
 extends ../layouts/LayoutTheme
 include ../mixins/pages/AwardDetailJson.pug
 
+block beforeMainContent
+  +FancyNav({navClass: 'fancynavbar-left'})(data-onscroll-fade-in = 'true')
+
 append mainContent  
   - 
     const data = {
