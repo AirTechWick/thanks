@@ -1,0 +1,44 @@
+mixin AwardDetail(project, author, details, referenceLink, image)
+  +Section('container-fluid').py-0#award-detail
+    .row
+      .col-xl-7.px-0
+        .sticky-top.overflow-hidden.min-vh-50.min-vh-xl-100
+          +Background({
+            image: `${CWD}assets/img/award/${image}`,
+            attrs: {'data-zanim-trigger': 'scroll', 'data-zanim-lg': {animation: 'zoom-out-slide-right', delay: 0.4}}
+          })
+
+      .col-xl-5.bg-white.py-6
+        .row.h-100.flex-center
+          .col-lg-8
+            +AwardContent(project, author, details, referenceLink)
+
+mixin AwardContent(project, author, details, referenceLink)
+  .row.justify-content-center(data-zanim-timeline!={} data-zanim-trigger='scroll')
+    .col-md-10.col-lg-12
+      .overflow-hidden
+        h4(data-zanim-xs!={delay: 0.1}) #{project}
+      .overflow-hidden
+        h6.text-700.fw-normal.text-uppercase.ls.mb-4(data-zanim-xs!={delay: 0.2}) thanks to #{author}
+    .col-md-7.col-lg-12
+      .overflow-hidden
+        p.mb-0.pe-sm-5.pe-lg-0(data-zanim-xs!={delay: 0.3}) #{details}
+
+    .col-md-3.col-lg-12.mt-6.mt-md-0.mt-lg-6
+      .overflow-hidden
+        h6.text-uppercase.ls(data-zanim-xs!={delay: 0.4}) reference
+      .overflow-hidden
+        div(data-zanim-xs!={delay: 0.5})
+          a(href=`${referenceLink}`).text-700 community contribution
+
+      //- .overflow-hidden
+      //-   div(data-zanim-xs!={delay: 0.6})
+      //-     h6.text-uppercase.ls.mt-4 Follow Me
+
+      //-     .mt-3.fs--1
+      //-       a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+      //-         span.fab.fa-twitter.text-600
+      //-       a(href='#!').btn.btn-outline-light.btn-xs.border-300.me-2
+      //-         span.fab.fa-google-plus-g.text-600
+      //-       a(href='#!').btn.btn-outline-light.btn-xs.border-300
+      //-         span.fab.fa-linkedin-in.text-600
