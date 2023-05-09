@@ -16,7 +16,12 @@ append mainContent
     const data = {
       "project": "Swift Library for Open Spherical Camera API", 
       "author": "Fernando Viteri",
-      "details": "Description of contribution",
+      "details": "Fernando fixed a problem with iOS iPads displaying \
+      the live preview for THETA cameras too slow. in Swift, live preview is \
+      calculated in the file /OpenSphericalCamera/LivePreviewDelegate.swift. \
+      LivePreviewDelegate evaluates about 1 million bytes. The solution is to \
+      check the first 2 bytes and the last 2 bytes. This approach lets you do \
+      about 100 comparisons, instead of 1 million. Fernando contributed his code back to the community.",
       "referenceLink": "https://community.theta360.guide/t/swift-library-for-open-spherical-camera-api/4420/13",
       "image": "viteri.png"
     }
