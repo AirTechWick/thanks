@@ -141,7 +141,7 @@
                     </div>
                     <div class="col-md-7 col-lg-12">
                       <div class="overflow-hidden">
-                        <p class="mb-0 pe-sm-5 pe-lg-0" data-zanim-xs='{"delay":0.3}'>Description of contribution</p>
+                        <p class="mb-0 pe-sm-5 pe-lg-0" data-zanim-xs='{"delay":0.3}'>Fernando fixed a problem with iOS iPads displaying the live preview for THETA cameras too slow. in Swift, live preview is calculated in the file /OpenSphericalCamera/LivePreviewDelegate.swift. LivePreviewDelegate evaluates about 1 million bytes. The solution is to check the first 2 bytes and the last 2 bytes. This approach lets you do about 100 comparisons, instead of 1 million. Fernando contributed his code back to the community.</p>
                       </div>
                     </div>
                     <div class="col-md-3 col-lg-12 mt-6 mt-md-0 mt-lg-6">
